@@ -1,0 +1,27 @@
+{
+    // "python.pythonPath": "venv/bin/python",
+    "python.defaultInterpreterPath": "venv/bin/python",
+    "python.formatting.provider": "black",
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "editor.formatOnSave": true,
+    "editor.fontSize": 16,
+    "editor.wordWrapColumn": 80,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wrappingIndent": "same",
+    "editor.formatOnType": true,
+    "editor.cursorStyle": "line",
+    "terminal.integrated.fontSize": 16,
+    "code-runner.runInTerminal": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.showExecutionMessage": false,
+    "code-runner.ignoreSelection": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintPath": "/home/solidsnake/ai/Golden_Group/dev/venv/bin/pylint",
+    "git.ignoreLimitWarning": true,
+    // "python.linting.pylintArgs": [
+    //     "--errors-only",
+    //     "--generated-members=numpy.* ,torch.*",
+    // ]
+}

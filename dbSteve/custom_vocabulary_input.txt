@@ -1,0 +1,60 @@
+Phrase	IPA	SoundsLike	DisplayAs
+a-big-change			a big change
+a-big-failure			a big failure
+a-big-idea			a big idea
+a-genius-activity			a genius activity
+a-leader-drives-while-the-follower-is-driven			a leader drives while the follower is driven
+a-leader-is-creative-while-the-follower-is-not			a leader is creative while the follower is not
+a-leader-tells-the-follower-what-to-do			a leader tells the follower what to do
+a-way-of-imagining-things			a way of imagining things
+achieving-goals			achieving goals
+always			always
+always-creating-something			always creating something
+always-moving-forward			always moving forward
+be-a-pirate			be a pirate
+be-a-pirate-in-the-navy			be a pirate in the navy
+both			both
+building-something-new			building something new
+combining-complex-characteristics			combining complex characteristics
+concentrate-on-simplification			concentrate on simplification
+constantly-building-the-future			constantly building the future
+creation-from-scratch			creation from scratch
+creativity			creativity
+day-per-week			day per week
+definitely-yes			definitely yes
+enjoy-past-successes			enjoy past successes
+every-day-of-my-life			every day of my life
+experimenting-constantly			experimenting constantly
+favorite-project			favorite project
+have-several-people-work-on-it			have several people work on it
+hour-per-day			hour per day
+improving-our-best-creations			improving our best creations
+it-depends			it depends
+it's-part-of-life			it's part of life
+join-the-navy			join the navy
+life-and-death			life and death
+looking-at-the-future			looking at the future
+looking-at-the-past			looking at the past
+making-things-look-good			making things look good
+never			never
+no			no
+no-stealing-is-bad			no stealing is bad
+older-spirits-have-more-experience			older spirits have more experience
+prioritize-opportunities			prioritize opportunities
+quality			quality
+quantity			quantity
+relax			relax
+sometimes			sometimes
+stay-hungry-stay-foolish			stay hungry stay foolish
+studying-every-process-deeply			studying every process deeply
+their-beautiful-music			their beautiful music
+their-rapid-career-success			their rapid career success
+their-team-dynamics			their team dynamics
+there-is-no-difference			there is no difference
+understand-every-step-in-the-process			understand every step in the process
+unification-of-thoughts			unification of thoughts
+wait-for-good-opportunities			wait for good opportunities
+wonder-what's-next			wonder what's next
+work			work
+yes			yes
+younger-spirits-have-more-innovation			younger spirits have more innovation

@@ -1,0 +1,303 @@
+[
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab1798c"
+    },
+    "question": "Great choice. Creativity is key to happiness and success. First question: Do you always have the courage to follow your own heart and intuition?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab1798d"
+    },
+    "question": "Let's be honest. It’s hard to always follow your heart and intuition.  Right?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab1798e"
+    },
+    "question": "Time to define our terms: What do you think creativity is? Click a choice.",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "a genius activity": {
+        "EQRating": 125,
+        "leadership": 35,
+        "innovation": 17,
+        "stability": 24,
+        "empathy": 96,
+        "response_type": "neutral"
+      },
+      "creation from scratch": {
+        "EQRating": 85,
+        "leadership": 38,
+        "innovation": 17,
+        "stability": 64,
+        "empathy": 76,
+        "response_type": "negative"
+      },
+      "unification of thoughts": {
+        "EQRating": 260,
+        "leadership": 95,
+        "innovation": 97,
+        "stability": 84,
+        "empathy": 86,
+        "response_type": "positive"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab1798f"
+    },
+    "question": "WHy? Because creativity is connecting things. When you ask creative people how they did something, they feel a little guilty because they didn’t really do it, they just saw something. It seemed obvious to them after a while. Ready for your next question?",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab17990"
+    },
+    "question": "Do you feel creative at your work?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab17991"
+    },
+    "question": "Time for a pep talk. Have the courage to follow your heart and intuition, they somehow already know what you truly want to become. Right?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab17992"
+    },
+    "question": "OK. Let’s switch things up again. Here’s a fundamental question for you. What do you think design is? Click a choice",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "a way of imagining things": {
+        "EQRating": 110,
+        "leadership": 65,
+        "innovation": 77,
+        "stability": 84,
+        "empathy": 86,
+        "response_type": "neutral"
+      },
+      "making things look good": {
+        "EQRating": 75,
+        "leadership": 55,
+        "innovation": 47,
+        "stability": 84,
+        "empathy": 86,
+        "response_type": "negative"
+      },
+      "combining complex characteristics": {
+        "EQRating": 210,
+        "leadership": 95,
+        "innovation": 97,
+        "stability": 64,
+        "empathy": 86,
+        "response_type": "positive"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab17993"
+    },
+    "question": "Design is not just what it looks like and feels like. Design is how it works. Designs aren’t just pulled from the air. They are built from the materials at hand. We’ll get into this in greater depth later. Ready for the next question?",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab17994"
+    },
+    "question": "OK. Too much craziness can be bad. But, too much “sanity” can be a straight jacket too. Especially in regards to creativity. Right?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab17995"
+    },
+    "question": "Enough craziness. Let's move on: what stimulates creativity in you? Pick a button.",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "a big change": {
+        "EQRating": 220,
+        "leadership": 95,
+        "innovation": 97,
+        "stability": 64,
+        "empathy": 56,
+        "response_type": "positive"
+      },
+      "a big failure": {
+        "EQRating": 210,
+        "leadership": 85,
+        "innovation": 97,
+        "stability": 74,
+        "empathy": 36,
+        "response_type": "neutral"
+      },
+      "a big idea": {
+        "EQRating": 85,
+        "leadership": 55,
+        "innovation": 47,
+        "stability": 84,
+        "empathy": 86,
+        "response_type": "negative"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab17996"
+    },
+    "question": "Creativity comes from change. Big failure can bring big change. Getting fired from Apple was the best thing that ever happened to me. The heaviness of being successful was replaced by the lightness of being a beginner again. Big ideas are the result of change, not the cause. Ready for the next question?",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab17997"
+    },
+    "question": "Let’s get back to basic creativity concepts. Tell me something. Are you hungry enough? Are you foolish enough to be creative?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab17998"
+    },
+    "question": "Your last answer is completely between you, and YOU! How much creativity you allow yourself is determined by how much belief you have in yourself. My job, as your Life Coach, is to increase your creativity by increasing your self-belief. Do you want to add another private message from you, to you?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab17999"
+    },
+    "question": "Wait. Let's store your reply. Ready?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab1799a"
+    },
+    "question": "There. We’ll discuss it later. For now, let’s get back to basics. What is the key to living in a creative life? Pick a button.",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "constantly building the future": {
+        "EQRating": 260,
+        "leadership": 95,
+        "innovation": 97,
+        "stability": 74,
+        "empathy": 86,
+        "response_type": "positive"
+      },
+      "improving our best creations": {
+        "EQRating": 245,
+        "leadership": 75,
+        "innovation": 97,
+        "stability": 84,
+        "empathy": 36,
+        "response_type": "neutral"
+      },
+      "always creating something": {
+        "EQRating": 210,
+        "leadership": 85,
+        "innovation": 87,
+        "stability": 64,
+        "empathy": 76,
+        "response_type": "negative"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab1799b"
+    },
+    "question": "If you want to live your life in a creative way, as an artist, you must not look back too much. You have to be willing to take whatever you’ve done and whoever you were and throw them away. Ready for the next question?",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab1799c"
+    },
+    "question": "OK. Let’s move on. What basic behavior trait makes true innovators successful? Click your choice",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "experimenting constantly": {
+        "EQRating": 214,
+        "leadership": 75,
+        "innovation": 97,
+        "stability": 74,
+        "empathy": 76,
+        "response_type": "neutral"
+      },
+      "studying every process deeply": {
+        "EQRating": 80,
+        "leadership": 53,
+        "innovation": 37,
+        "stability": 84,
+        "empathy": 86,
+        "response_type": "negative"
+      },
+      "always moving forward": {
+        "EQRating": 260,
+        "leadership": 95,
+        "innovation": 97,
+        "stability": 64,
+        "empathy": 56,
+        "response_type": "positive"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4dbd30f0c743ab1799d"
+    },
+    "question": "Your E Q Rating is a measure of your emotional attitude toward your life and work. In future sessions, we will tune your emotional attitude to optimize your success in life. And that wraps up this session.",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5ff16708fe3a9224602a465d"
+    },
+    "question": "Last thing I want to show you is how your emotional attitude is broken down into these components: leadership, innovation, stability, and empathy. In future sessions, we will train you like an athlete, to obtain maximum success in your life. This is what being a Life Coach is all about. That's it for now. Great getting started on the road to success. See you next session.",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": true
+  }
+]

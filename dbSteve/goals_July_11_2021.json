@@ -1,0 +1,240 @@
+[
+  {
+    "_id": {
+      "$oid": "5fc8b4e9d30f0c743ab1799e"
+    },
+    "question": "Great Topic choice. Let’s start at the beginning. The first step in achieving a goal is to define it clearly. So, tell me, what is your primary professional goal?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4e9d30f0c743ab1799f"
+    },
+    "question": "We’ll get back to that answer. First, let’s look at goals from another perspective. What do you think is more important? Quantity or quality? Click your choice",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "quantity": {
+        "EQRating": 67,
+        "leadership": 55,
+        "innovation": 47,
+        "stability": 84,
+        "empathy": 76,
+        "response_type": "negative"
+      },
+      "quality": {
+        "EQRating": 245,
+        "leadership": 95,
+        "innovation": 97,
+        "stability": 64,
+        "empathy": 86,
+        "response_type": "positive"
+      },
+      "both": {
+        "EQRating": 212,
+        "leadership": 85,
+        "innovation": 67,
+        "stability": 74,
+        "empathy": 76,
+        "response_type": "neutral"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4e9d30f0c743ab179a0"
+    },
+    "question": "Why? Because quality is much better than quantity. One home run is much better than two doubles. Be a yardstick of quality. Some people aren’t used to an environment where excellence is expected. Let's go on to the next question",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4e9d30f0c743ab179a2"
+    },
+    "question": "What do you think is the best way to manage complex activities? Click a choice",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "understand every step in the process": {
+        "EQRating": 184,
+        "leadership": 85,
+        "innovation": 67,
+        "stability": 84,
+        "empathy": 76,
+        "response_type": "positive"
+      },
+      "have several people work on it": {
+        "EQRating": 75,
+        "leadership": 45,
+        "innovation": 37,
+        "stability": 74,
+        "empathy": 96,
+        "response_type": "negative"
+      },
+      "concentrate on simplification": {
+        "EQRating": 100,
+        "leadership": 95,
+        "innovation": 97,
+        "stability": 74,
+        "empathy": 56,
+        "response_type": "neutral"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4e9d30f0c743ab179a3"
+    },
+    "question": "My main mantra is “focus and simplicity”. We will be coming back to this again and again. Simple can be harder than complex; you have to work hard to get your thinking clean to make it simple. Let's go ahead",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4e9d30f0c743ab179a5"
+    },
+    "question": "There is a team that inspires me for their ability to work together: The Beatles. Can you guess why? Pick a button.",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "their beautiful music": {
+        "EQRating": 94,
+        "leadership": 45,
+        "innovation": 37,
+        "stability": 74,
+        "empathy": 96,
+        "response_type": "negative"
+      },
+      "their team dynamics": {
+        "EQRating": 240,
+        "leadership": 85,
+        "innovation": 77,
+        "stability": 64,
+        "empathy": 96,
+        "response_type": "positive"
+      },
+      "their rapid career success": {
+        "EQRating": 185,
+        "leadership": 75,
+        "innovation": 67,
+        "stability": 84,
+        "empathy": 76,
+        "response_type": "neutral"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4e9d30f0c743ab179a6"
+    },
+    "question": "As a team, the Beatles were four guys who kept each other’s negative tendencies in check. They balanced each other and the total was greater than the sum of the parts. That’s how I see business: great things in business are never done by one person, they’re done by a team of people. Let's continue",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4e9d30f0c743ab179a9"
+    },
+    "question": "Here is a general question that you surely asked yourself many a time. What’s the best way to see connections between your behavior and the results? Pick a choice",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "looking at the future": {
+        "EQRating": 74,
+        "leadership": 75,
+        "innovation": 67,
+        "stability": 64,
+        "empathy": 76,
+        "response_type": "negative"
+      },
+      "looking at the past": {
+        "EQRating": 231,
+        "leadership": 95,
+        "innovation": 87,
+        "stability": 84,
+        "empathy": 76,
+        "response_type": "positive"
+      },
+      "building something new": {
+        "EQRating": 210,
+        "leadership": 85,
+        "innovation": 97,
+        "stability": 74,
+        "empathy": 76,
+        "response_type": "neutral"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4e9d30f0c743ab179aa"
+    },
+    "question": "You can’t connect the dots looking forward; you can only connect them looking backward. So you have to trust that the dots will somehow connect in your future. You have to trust in something: your gut, destiny, life, karma, whatever. This approach has never let me down, and it has made all the difference in my life. The point is, don’t let “plans” and ”thinking” immobilize you. That’s what I mean when I say, “Stay foolish. Stay hungry. Moving forward",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4e9d30f0c743ab179ac"
+    },
+    "question": "I have another question. Does it make sense to put your very best into a project, even if it’s a small opportunity? Pick one.",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "always": {
+        "EQRating": 246,
+        "leadership": 95,
+        "innovation": 97,
+        "stability": 64,
+        "empathy": 66,
+        "response_type": "positive"
+      },
+      "never": {
+        "EQRating": 80,
+        "leadership": 55,
+        "innovation": 57,
+        "stability": 84,
+        "empathy": 66,
+        "response_type": "negative"
+      },
+      "prioritize opportunities": {
+        "EQRating": 210,
+        "leadership": 75,
+        "innovation": 77,
+        "stability": 74,
+        "empathy": 86,
+        "response_type": "neutral"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4e9d30f0c743ab179ad"
+    },
+    "question": "Here's why. When you’re a quality carpenter making a beautiful chest of drawers, you’re not going to use a piece of plywood on the back, even though it faces the wall and nobody will see it. You’ll know it’s there, so you’re going to use a beautiful piece of wood on the back. For you to sleep well at night, the aesthetic, the quality, has to be carried all the way through. And that is the end of this session.",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5ff167b5fe3a9224602a465e"
+    },
+    "question": "Last thing I want to show you is how your emotional attitude is broken down into these components: leadership, innovation, stability, and empathy. In future sessions, we will train you like an athlete, to obtain maximum success in your life. This is what being a Life Coach is all about. That's it for now. Great getting started on the road to success. See you next session.",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": true
+  }
+]

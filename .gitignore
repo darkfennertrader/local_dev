@@ -1,0 +1,9 @@
+*.pth
+*.gz
+/venv
+/wandb
+/cache_dir
+/runs
+personachat_self_original.json
+/training_data
+/data

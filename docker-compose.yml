@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+    dev:
+        container_name: tensorflow-dev
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            # named volume mapped into the container (ai model for inference)
+            - /home/solidsnake/ai/Golden_Group/ai-models:/home/ai-models/
+            # bind/host volume for development
+            # - .:/home/dev_env
+        ports:
+            - "8888:8888" # host:container exposed port for web applications
+
+        environment:
+            - NVIDIA_VISIBLE_DEVICES=all
+
+        command: tail -f /dev/null 

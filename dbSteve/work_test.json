@@ -1,0 +1,232 @@
+[
+  {
+    "_id": {
+      "$oid": "5fc8b508d30f0c743ab179c3"
+    },
+    "question": "Good choice. Your work will fill a large part of your life. The only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. Do you love your job?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b508d30f0c743ab179c4"
+    },
+    "question": "Do you want to add something to that, or move on?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b508d30f0c743ab179c5"
+    },
+    "question": "Let’s hit this from a completely different angle. Would you prefer to be a pirate or to join the navy? Click a choice.",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "join the navy": {
+        "EQRating": 85,
+        "leadership": 65,
+        "innovation": 67,
+        "stability": 84,
+        "empathy": 76,
+        "response_type": "negative"
+      },
+      "be a pirate": {
+        "EQRating": 249,
+        "leadership": 95,
+        "innovation": 97,
+        "stability": 64,
+        "empathy": 46,
+        "response_type": "neutral"
+      },
+      "be a pirate in the navy": {
+        "EQRating": 260,
+        "leadership": 85,
+        "innovation": 87,
+        "stability": 74,
+        "empathy": 76,
+        "response_type": "positive"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b508d30f0c743ab179c6"
+    },
+    "question": "I have always said it’s much better to be a pirate then join the navy. It’s about freedom, independence and autonomy. Are you ready for my next question?",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b508d30f0c743ab179c7"
+    },
+    "question": "Do you think yourself as a leader?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b508d30f0c743ab179c8"
+    },
+    "question": "Hmm... Maybe we should back that last question up a bit. What’s the difference between a leader and a follower?",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "a leader drives while the follower is driven": {
+        "EQRating": 194,
+        "leadership": 75,
+        "innovation": 67,
+        "stability": 84,
+        "empathy": 76,
+        "response_type": "neutral"
+      },
+      "a leader is creative while the follower is not": {
+        "EQRating": 238,
+        "leadership": 95,
+        "innovation": 97,
+        "stability": 64,
+        "empathy": 66,
+        "response_type": "positive"
+      },
+      "a leader tells the follower what to do": {
+        "EQRating": 76,
+        "leadership": 65,
+        "innovation": 67,
+        "stability": 74,
+        "empathy": 76,
+        "response_type": "negative"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b508d30f0c743ab179c9"
+    },
+    "question": "My firm belief has always been that it’s innovation that distinguishes between a leader and a follower. I’m talking about a real leader. One that brings change and progress. Are you ready for my next question?",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b508d30f0c743ab179ca"
+    },
+    "question": "Let’s stick with innovation for a second. After you've innovated, what should you do next?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b508d30f0c743ab179cb"
+    },
+    "question": "I think if you innovate and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long. Just figure out what’s next, What do you think is the difference between an older spirit and a younger one? Pick a button.",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "older spirits have more experience": {
+        "EQRating": 170,
+        "leadership": 75,
+        "innovation": 67,
+        "stability": 84,
+        "empathy": 76,
+        "response_type": "neutral"
+      },
+      "younger spirits have more innovation": {
+        "EQRating": 252,
+        "leadership": 95,
+        "innovation": 97,
+        "stability": 64,
+        "empathy": 76,
+        "response_type": "positive"
+      },
+      "there is no difference": {
+        "EQRating": 85,
+        "leadership": 55,
+        "innovation": 57,
+        "stability": 74,
+        "empathy": 76,
+        "response_type": "negative"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b508d30f0c743ab179cc"
+    },
+    "question": "Here’s how I look at it. The older man sits down and asks: ‘What is it?’ but the boy asks: 'What can I do with it?'. We’re talking about spirit here, not actual age. You can be young, and have an old spirit, or old and have a young spirit. The point is to stay hungry and foolish as well. Ready for your next question?",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b508d30f0c743ab179cd"
+    },
+    "question": "If you haven’t found the job you love yet, keep looking. Don’t settle. As with all matters of the heart, you’ll know when you find it. The key to success and progress is having the sense that right now is one of those moments when we are influencing the future. Are you ready to influence the future?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b508d30f0c743ab179ce"
+    },
+    "question": "OK. Are you ready to steal the best human ideas and integrate them into your best innovations?  Pick a button",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "it depends": {
+        "EQRating": 120,
+        "leadership": 85,
+        "innovation": 77,
+        "stability": 74,
+        "empathy": 76,
+        "response_type": "neutral"
+      },
+      "no, stealing is bad": {
+        "EQRating": 94,
+        "leadership": 65,
+        "innovation": 67,
+        "stability": 84,
+        "empathy": 96,
+        "response_type": "negative"
+      },
+      "definitely, yes": {
+        "EQRating": 230,
+        "leadership": 95,
+        "innovation": 97,
+        "stability": 54,
+        "empathy": 66,
+        "response_type": "positive"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b508d30f0c743ab179cf"
+    },
+    "question": "Picasso had a saying: good artists copy, great artists steal. He had another saying: I am never embarrassed to steal from anyone, I’m only embarrassed to steal from myself. What he meant is that: as a creative artist, you have to be willing to take whatever you’ve done and whoever you were and throw them away. And always be hungry for new ideas. That wraps up this session. In future sessions, we will tune your emotional attitude to optimize your success in life.",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5ff2f3178e6c8d30f254c0cc"
+    },
+    "question": "Last thing I want to show you is how your emotional attitude is broken down into these components: leadership, innovation, stability, and empathy. In future sessions, we will train you like an athlete, to obtain maximum success in your life. This is what being a Life Coach is all about. That's it for now. Great getting started on the road to success. See you next session.",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": true
+  }
+]

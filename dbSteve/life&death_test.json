@@ -1,0 +1,321 @@
+[
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179af"
+    },
+    "question": "Good choice. We’re getting right to the heart of life's most essential questions. Let’s get started. Do you have a focus in your life?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179b0"
+    },
+    "question": "OK. That's a start. Can you tell me a little more?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179b1"
+    },
+    "question": "Hmmm. Let me ask you another question: Do you think it is important to follow other people’s visions?",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "yes": {
+        "EQRating": 65,
+        "leadership": 35,
+        "innovation": 17,
+        "stability": 24,
+        "empathy": 96,
+        "response_type": "negative"
+      },
+      "no": {
+        "EQRating": 185,
+        "leadership": 95,
+        "innovation": 97,
+        "stability": 21,
+        "empathy": 16,
+        "response_type": "positive"
+      },
+      "sometimes": {
+        "EQRating": 105,
+        "leadership": 65,
+        "innovation": 57,
+        "stability": 84,
+        "empathy": 66,
+        "response_type": "neutral"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179b2"
+    },
+    "question": "Here's why. No one should waste their time living someone else’s life. Don’t be trapped inside other people’s thinking. Remember, Your time is limited. Are you ready for my next question?",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179b3"
+    },
+    "question": "Do you really think that you can change other people’s lives?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179b4"
+    },
+    "question": "This reveals your sense of personal power. How much do you control others? How much do others control you? Can you give me a bit more on this topic? It helps me understand you.",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179b5"
+    },
+    "question": "Alright. Let’s look at this from another angle: How much time do you dedicate to things that you feel are personally important for you? Click a choice",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "hour per day": {
+        "EQRating": 110,
+        "leadership": 25,
+        "innovation": 12,
+        "stability": 84,
+        "empathy": 94,
+        "response_type": "neutral"
+      },
+      "day per week": {
+        "EQRating": 75,
+        "leadership": 35,
+        "innovation": 17,
+        "stability": 24,
+        "empathy": 96,
+        "response_type": "negative"
+      },
+      "every day of my life": {
+        "EQRating": 210,
+        "leadership": 95,
+        "innovation": 97,
+        "stability": 44,
+        "empathy": 16,
+        "response_type": "positive"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179b6"
+    },
+    "question": "Here’s why: My favorite things in life don’t cost any money at all. It’s really clear that the most precious resource we all have is time. Are you ready for my next question?",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179b7"
+    },
+    "question": "OK Here’s another one for you: do you have one recurring question that you are always asking yourself?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179b8"
+    },
+    "question": "Do you want to expand on that a bit?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179b9"
+    },
+    "question": "Alright. Here’s a completely different question. It’s personal. Ready? What would you do if this were the last day of your life? Pick a button.",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "relax": {
+        "EQRating": 110,
+        "leadership": 35,
+        "innovation": 17,
+        "stability": 94,
+        "empathy": 86,
+        "response_type": "neutral"
+      },
+      "wonder what's next": {
+        "EQRating": 85,
+        "leadership": 35,
+        "innovation": 87,
+        "stability": 54,
+        "empathy": 86,
+        "response_type": "negative"
+      },
+      "favorite project": {
+        "EQRating": 175,
+        "leadership": 95,
+        "innovation": 97,
+        "stability": 94,
+        "empathy": 66,
+        "response_type": "positive"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179ba"
+    },
+    "question": "As a working adult, I looked in the mirror every morning and asked myself, ‘If today were the last day of my life, would I want to do what I am about to do today?’ And whenever the answer was ‘No’, I knew I needed to change something. We don’t get to do that many things. Every one should be really excellent. Because this is our life. Ready for your next question?",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179bb"
+    },
+    "question": "Here’s a really broad question for you. Ready? How do you feel about humanity overall, as a species? Pretend you are looking down at humanity from Outer Space.",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179bc"
+    },
+    "question": "I personally believe humans are noble and honorable, and some of them are really smart. I have a very optimistic view of individuals. Do you want to add anything to your humanity assessment?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179bd"
+    },
+    "question": "Too much time in Outer Space, right? Let’s come down to Earth and get really personal. Are you, personally, afraid of death? Pick a button.",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "yes": {
+        "EQRating": 90,
+        "leadership": 75,
+        "innovation": 77,
+        "stability": 24,
+        "empathy": 96,
+        "response_type": "negative"
+      },
+      "no": {
+        "EQRating": 285,
+        "leadership": 85,
+        "innovation": 77,
+        "stability": 84,
+        "empathy": 76,
+        "response_type": "positive"
+      },
+      "it's part of life": {
+        "EQRating": 105,
+        "leadership": 85,
+        "innovation": 77,
+        "stability": 84,
+        "empathy": 76,
+        "response_type": "neutral"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179be"
+    },
+    "question": "Why do I say that? Here’s why. Remembering that I would be dead soon was the most important tool I ever encountered to help me make the big choices in life. Everything: all external expectations, all pride, all fear of embarrassment or failure, these things just fall away in the face of death, leaving only what is truly important. Are you ready for the next question?",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179bf"
+    },
+    "question": "OK. Sometimes life hits you in the head with a brick. You should not lose faith. Do you?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179c0"
+    },
+    "question": "Of course, we all lose faith sometimes. But for me, getting fired from Apple was the best thing that ever happened to me. It freed me to enter one of the most creative periods of my life. Do you want to add anything to your last thoughts about losing faith?",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179c1"
+    },
+    "question": "Congratulations, This is the last question of this “Meaning of Life and Death” Topic. I’m going to make it very simple. What’s the most productive and creative approach to life? Pick one.",
+    "has_answer": true,
+    "give_score": false,
+    "end_session": false,
+    "answers": {
+      "wait for good opportunities": {
+        "EQRating": 62,
+        "leadership": 35,
+        "innovation": 17,
+        "stability": 64,
+        "empathy": 96,
+        "response_type": "negative"
+      },
+      "enjoy past successes": {
+        "EQRating": 80,
+        "leadership": 35,
+        "innovation": 17,
+        "stability": 84,
+        "empathy": 96,
+        "response_type": "neutral"
+      },
+      "stay hungry, stay foolish": {
+        "EQRating": 260,
+        "leadership": 95,
+        "innovation": 97,
+        "stability": 54,
+        "empathy": 46,
+        "response_type": "positive"
+      }
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5fc8b4f8d30f0c743ab179c2"
+    },
+    "question": "Your E Q Rating is a measure of your emotional attitude toward your life and work. And that wraps up this session. In future sessions, we will tune your emotional attitude to optimize your success in life.",
+    "has_answer": false,
+    "give_score": true,
+    "end_session": false
+  },
+  {
+    "_id": {
+      "$oid": "5ff167e4fe3a9224602a465f"
+    },
+    "question": "Last thing I want to show you is how your emotional attitude is broken down into these components: leadership, innovation, stability, and empathy. In future sessions, we will train you like an athlete, to obtain maximum success in your life. This is what being a Life Coach is all about. That's it for now. Great getting started on the road to success. See you next session.",
+    "has_answer": false,
+    "give_score": false,
+    "end_session": true
+  }
+]
