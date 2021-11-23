@@ -197,24 +197,27 @@ def internet_wizard(query, sentences_list, use_sagemaker=True):
 def keywords_extraction(query):
     # extracting keywords/keyphrases from user utterance
     keywords = kw_model.extract_keywords(query)
-    k_words = kw_model.extract_keywords(
-        query,
-        keyphrase_ngram_range=(2, 4),
-        stop_words="english",
-        use_maxsum=True,
-        nr_candidates=3,
-        top_n=2,
-    )
-    print()
-    print(k_words)
+    try:
+        k_words = kw_model.extract_keywords(
+            query,
+            keyphrase_ngram_range=(2, 4),
+            stop_words="english",
+            use_maxsum=True,
+            nr_candidates=3,
+            top_n=1,
+        )
+        print()
+        print(k_words)
+        return sorted(k_words, key=lambda similarity: similarity[1], reverse=True)[0][0]
 
-    return sorted(k_words, key=lambda similarity: similarity[1], reverse=True)[0][0]
+    except Exception:
+        return "Steve Jobs"
 
 
 if __name__ == "__main__":
     ###################################################
     use_sagemaker = False
-    query = "I want to know who won the 2010 world cup"
+    query = "love you"
     ###################################################
 
     partial_time_computation = []
