@@ -64,6 +64,7 @@ import itertools
 import pickle
 import numpy as np
 import pandas as pd
+import random
 from pprint import pprint
 
 from sentence_transformers import SentenceTransformer
@@ -87,6 +88,9 @@ from sklearn.metrics import (
     classification_report,
 )
 from sklearn.pipeline import Pipeline
+from sklearn.utils import shuffle
+import torch
+from sentence_transformers import SentenceTransformer
 
 model_name_or_path = "/home/solidsnake/ai/Golden_Group/ai-models/development/sentence-embeddings/all-mpnet-base-v2/"
 se_model = SentenceTransformer(model_name_or_path, device="cuda")
@@ -94,15 +98,48 @@ se_model = SentenceTransformer(model_name_or_path, device="cuda")
 
 def build_dataframe():
     # extracting generic questions
-    df = pd.read_csv(
+    df1 = pd.read_csv(
         "./data/docleaderboard-queries.tsv", sep="\t", usecols=[1], header=None
     )
-    df.columns = ["question"]
-    df["label"] = "generic"
-    # print(df.head())
+    df1.columns = ["question"]
+    df1["label"] = "generic"
+    print(df1.head())
+    print(f"generic dataframe length: {len(df1.index)}")
 
-    print(f"generic dataframe length: {len(df.index)}")
+    indices_no = 4000
+    indices = np.random.choice(df1.index, indices_no, replace=False)
 
+    # sample rows
+    df2 = df1.iloc[indices]
+    print(f"sampled dataframe length: {len(df2.index)}")
+
+    df1 = df1.drop(indices)
+    print(f"generic dataframe length after sampling: {len(df1.index)}")
+
+    # improving the dataset by adding direct questions
+    starting_phrases = [
+        "Do you know",
+        "Do you happen to know",
+        "Tell me",
+        "Can you tell me",
+        "Could you tell me",
+        "Steve do you know",
+        "Steve can you tell me",
+        "Steve could you tell me",
+    ]
+
+    df2["question"] = df2["question"].apply(
+        lambda x: random.choice(starting_phrases) + " " + x
+    )
+    print(df2.head())
+
+    # adding samples to the generic dataset
+    df_generic = df1.append(df2, ignore_index=True)
+    df_generic = df_generic.sample(frac=1).reset_index(drop=True)
+    print(df_generic.head())
+    print(f"final dataframe length: {len(df_generic.index)}")
+
+    #############################################################
     # extracting Steve Jobs'life questions
     files = [
         "variant_1.json",
@@ -148,7 +185,7 @@ def build_dataframe():
     # print(len(steve_data.index))
     print(f"steve jobs dataframe length: {len(steve_data.index)}")
 
-    df_final = df.append(steve_data).sample(frac=1)
+    df_final = df_generic.append(steve_data).sample(frac=1)
     print()
     print(df_final.head(10))
     print()
@@ -228,7 +265,8 @@ if __name__ == "__main__":
 
     # build and pickle dataset if it doesn't exist
     build_dataset = False
-    train = True
+    train = False
+    predict = True
 
     if build_dataset:
         build_dataframe()
@@ -238,18 +276,23 @@ if __name__ == "__main__":
         clf = train_with_ml()
 
     # predict
-    clf = pickle.load(open(filename, "rb"))
+    if predict:
+        clf = pickle.load(open(filename, "rb"))
 
-    user_utterances = ["did you take acids?"]
-    print("\nResults:")
-    print()
+        user_utterances = [
+            "who is Albert Einstein",
+            "steve who is albert einstein?",
+            "can you tell me who is Albert Einstein",
+        ]
+        print("\nResults:")
+        print()
 
-    for utt in user_utterances:
-        embedded_utterance = se_model.encode([utt])
-        prediction = clf.predict(embedded_utterance)[0]
-        print(
-            f"user utterance: {utt}, classification: {prediction} with prob: { clf.predict_proba(embedded_utterance)[0]}"
-        )
+        for utt in user_utterances:
+            embedded_utterance = se_model.encode([utt])
+            prediction = clf.predict(embedded_utterance)[0]
+            print(
+                f"user utterance: {utt}, \nclassification: {prediction} with prob: { clf.predict_proba(embedded_utterance)[0]}"
+            )
 
     # performances = []
     # for _ in itertools.repeat(None, 50):

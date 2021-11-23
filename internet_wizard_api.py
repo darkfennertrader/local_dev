@@ -5,8 +5,18 @@ import requests
 import boto3
 import pprint
 from requests.exceptions import HTTPError
+from keybert import KeyBERT
+import numpy as np
+from sentence_transformers import CrossEncoder
 
 pp = pprint.PrettyPrinter(indent=4)
+
+
+# cross-encoder INIT (for keyword extraction)
+cross_encoder = "/home/solidsnake/ai/Golden_Group/ai-models/development/cross-encoders/ms-marco-MiniLM-L-12-v2"
+
+model = CrossEncoder(cross_encoder, max_length=1024, device="cuda")
+kw_model = KeyBERT(cross_encoder)
 
 
 class Config(object):
@@ -112,7 +122,7 @@ def bing_search(
     headers = {"Accept": "application/json", "Authorization": f"Bearer {token}"}
     try:
         response = requests.post(bing_uri, headers=headers, json=payload, timeout=3)
-        print(response.status_code)
+        # print(response.status_code)
         return response.json()["items"], 200
 
     except Exception as e:
@@ -123,72 +133,122 @@ def bing_search(
 ############   SageMaker Cross-Encoder Model Initialization   #############
 
 
-def internet_wizard(query, sentences_list):
-    # AI Cross-Encoder
-    ce_model_URL = Config.CROSS_ENCODER_URI
-    # print(ce_model_URL)
+def internet_wizard(query, sentences_list, use_sagemaker=True):
 
-    payload = {
-        "query": query,
-        "sentences_list": sentences_list,
-    }
+    if use_sagemaker:
+        # AI Cross-Encoder
+        ce_model_URL = Config.CROSS_ENCODER_URI
+        # print(ce_model_URL)
 
-    headers = {"Content-Type": "application/json", "Accept": "application/json"}
+        payload = {
+            "query": query,
+            "sentences_list": sentences_list,
+        }
 
-    # ce_model_URL = "https://httpbin.org/post"
+        headers = {"Content-Type": "application/json", "Accept": "application/json"}
 
-    try:
-        response = requests.post(ce_model_URL, headers=headers, json=payload, timeout=3)
-        # print(dir(response))
-        # print()
-        # print(response.raise_for_status())
-        # print(response.json())
-        # print(f"best_sentence: {response.json()['best_sentence']}")
-        # print(response.status_code)
-        response.raise_for_status()
-        return response.json()["best_sentence"], response.status_code
+        # ce_model_URL = "https://httpbin.org/post"
 
-    except HTTPError as http_err:
-        # print(dir(http_err.response))
+        try:
+            response = requests.post(
+                ce_model_URL, headers=headers, json=payload, timeout=3
+            )
+            # print(dir(response))
+            # print()
+            # print(response.raise_for_status())
+            # print(response.json())
+            # print(f"best_sentence: {response.json()['best_sentence']}")
+            # print(response.status_code)
+            response.raise_for_status()
+            return response.json()["best_sentence"], response.status_code
 
-        if http_err.response.status_code == 400:
-            error_message = http_err.response.json()["message"]
-        if http_err.response.status_code == 404:
-            error_message = http_err.response.json()["message"]
-        elif http_err.response.status_code == 503:
-            error_message = f"{http_err.response.reason} for {http_err.response.url}"
-        else:
-            error_message = http_err
+        except HTTPError as http_err:
+            # print(dir(http_err.response))
 
-        return error_message, None
+            if http_err.response.status_code == 400:
+                error_message = http_err.response.json()["message"]
+            if http_err.response.status_code == 404:
+                error_message = http_err.response.json()["message"]
+            elif http_err.response.status_code == 503:
+                error_message = (
+                    f"{http_err.response.reason} for {http_err.response.url}"
+                )
+            else:
+                error_message = http_err
 
-    except Exception as err:
-        print(dir(err))
-        print(err.response)
-        print(f"Other error occurred: {err}")
+            return error_message, None
+
+        except Exception as err:
+            print(dir(err))
+            print(err.response)
+            print(f"Other error occurred: {err}")
+
+    # use local model
+    else:
+        sentences_combinations = [[query, sentence] for sentence in sentences_list]
+        # print(sentences_combinations)
+        scores = model.predict(sentences_combinations)
+        # print(scores)
+        max_idx = np.argmax(np.asarray(scores))
+        # print(np.argmax(np.asarray(scores)))
+        return sentences_list[max_idx], 200
+
+
+def keywords_extraction(query):
+    # extracting keywords/keyphrases from user utterance
+    keywords = kw_model.extract_keywords(query)
+    k_words = kw_model.extract_keywords(
+        query,
+        keyphrase_ngram_range=(2, 4),
+        stop_words="english",
+        use_maxsum=True,
+        nr_candidates=3,
+        top_n=2,
+    )
+    print()
+    print(k_words)
+
+    return sorted(k_words, key=lambda similarity: similarity[1], reverse=True)[0][0]
 
 
 if __name__ == "__main__":
-    query = "Who built Rome?"
+    ###################################################
+    use_sagemaker = False
+    query = "I want to know who won the 2010 world cup"
+    ###################################################
+
+    partial_time_computation = []
     start = time.time()
-    raw_searches, status_code = bing_search(query)
-    print(f"internet search took {(time.time() - start):3f} sec.")
+    query_modified = keywords_extraction(query)
+    print(f"Keywords extraction took {(time.time() - start):3f} sec.")
+    partial_time_computation.append(time.time() - start)
+    # print(query_modified)
+
+    start = time.time()
+    raw_searches, status_code = bing_search(query_modified)
+    print(f"\nInternet search took {(time.time() - start):3f} sec.")
+    partial_time_computation.append(time.time() - start)
 
     if status_code == 200:
-        BOT_answer, status_code = internet_wizard(query, raw_searches)
+        start = time.time()
+        BOT_answer, status_code = internet_wizard(
+            query, raw_searches, use_sagemaker=use_sagemaker
+        )
         if status_code == 200:
             print()
             print("raw choice:")
             print(BOT_answer)
-            print(f"\nTotal time elapsed: {(time.time() - start):3f} sec.")
+            print(f"\nCross-Encoder took: {(time.time() - start):3f} sec.")
+            partial_time_computation.append(time.time() - start)
+
+            start = time.time()
             text_cleaned, sentences_list = text_cleaning(BOT_answer)
-            print("\n")
-            print("choice after noise reduction")
+            print("\nBOT answer after cleaning:")
             print(text_cleaned)
-            print(f"\nTotal time after cleaning: {(time.time() - start):3f} sec.")
-            # paraphrase mining
-            for i in range(len(sentences_list) - 1):
-                pass
+            print(f"\nTime after cleaning: {(time.time() - start):3f} sec.")
+            partial_time_computation.append(time.time() - start)
+
+            print(f"\nTotal Elapsed Time: {sum(partial_time_computation):3f} sec.")
 
         else:
             print()
@@ -199,18 +259,3 @@ if __name__ == "__main__":
         print()
         print("ERROR MESSAGE:")
         print()
-
-
-##################### using LOCAL Cross-Encode Model ######################
-# import numpy as np
-# from sentence_transformers import CrossEncoder
-
-# model = CrossEncoder(
-#     "cross-encoder/ms-marco-MiniLM-L-12-v2", max_length=1024, device="cuda"
-# )
-# scores = model.predict(list_to_rank)
-# print(scores)
-
-# print(np.argmax(np.asarray(scores)))
-
-# print()
