@@ -1,9 +1,9 @@
 {
-    // "python.pythonPath": "venv/bin/python",
     "python.defaultInterpreterPath": "venv/bin/python",
     "python.formatting.provider": "black",
     "python.terminal.activateEnvironment": true,
     "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.analysis.completeFunctionParens": false,
     "editor.formatOnSave": true,
     "editor.fontSize": 16,
     "editor.wordWrapColumn": 80,
@@ -20,6 +20,9 @@
     "python.linting.enabled": true,
     "python.linting.pylintPath": "/home/solidsnake/ai/Golden_Group/dev/venv/bin/pylint",
     "git.ignoreLimitWarning": true,
+    "editor.autoClosingDelete": "never",
+    "editor.defaultFormatter": "formulahendry.code-runner",
+    "editor.autoClosingOvertype": "never",
     // "python.linting.pylintArgs": [
     //     "--errors-only",
     //     "--generated-members=numpy.* ,torch.*",

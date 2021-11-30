@@ -11,17 +11,23 @@ import torch.onnx
 import torchvision
 from transformers.convert_graph_to_onnx import convert
 from transformers import (
+    AutoModel,
     AutoModelForSequenceClassification,
     AutoTokenizer,
+    T5Tokenizer,
+    BertTokenizer,
     AutoConfig,
     BartForConditionalGeneration,
+    BertForSequenceClassification,
     RobertaForSequenceClassification,
+    T5ForConditionalGeneration,
     AutoModelForCausalLM,
     GPT2Config,
     GPT2DoubleHeadsModel,
     GPT2Tokenizer,
 )
-import onnxruntime
+
+# import onnxruntime
 
 import boto3
 from boto3.dynamodb.conditions import Key, Attr
@@ -36,14 +42,14 @@ import json
 # model_name_or_path = "microsoft/DialoGPT-medium"
 
 
-save_dir = "/home/solidsnake/ai/Golden_Group/ai-models/development/cross-encoders/ms-marco-TinyBERT-L-2-v2/"
-model_name_or_path = "cross-encoder/ms-marco-TinyBERT-L-2-v2"
+save_dir = "/home/solidsnake/ai/Golden_Group/ai-models/development/cross-encoders/dpr-question_encoder-single-nq-base"
+model_name_or_path = "facebook/dpr-question_encoder-single-nq-base"
 
 
 # Natural Language Intent (Zero-Shot Classification)
 config = AutoConfig.from_pretrained(model_name_or_path)
 tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
-model = AutoModelForSequenceClassification.from_pretrained(
+model = AutoModel.from_pretrained(
     model_name_or_path,
     from_tf=False,
     config=config,

@@ -200,10 +200,10 @@ def keywords_extraction(query):
     try:
         k_words = kw_model.extract_keywords(
             query,
-            keyphrase_ngram_range=(2, 4),
+            keyphrase_ngram_range=(2, 5),
             stop_words="english",
             use_maxsum=True,
-            nr_candidates=3,
+            nr_candidates=10,
             top_n=1,
         )
         print()
@@ -217,7 +217,7 @@ def keywords_extraction(query):
 if __name__ == "__main__":
     ###################################################
     use_sagemaker = False
-    query = "love you"
+    query = "How did Elon Musk come up with the idea of Tesla?"
     ###################################################
 
     partial_time_computation = []
