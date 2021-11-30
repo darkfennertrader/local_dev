@@ -1,3 +1,4 @@
+/.vscode
 *.pth
 *.gz
 /venv
@@ -8,3 +9,4 @@ personachat_self_original.json
 /training_data
 /data
 /cache_dir
+/question_generation
