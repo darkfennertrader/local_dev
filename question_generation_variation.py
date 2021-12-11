@@ -17,9 +17,9 @@ model.eval()
 
 para = "I would be interested in knowing what do you think of donald trump. He is a great guy. Do you still support him after what he have done? "
 
-para = """Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum
-and first released in 1991, Python's design philosophy emphasizes code
-readability with its notable use of significant whitespace."""
+para = """Who is Diego Maradona? Diego Maradona was the greatest soccer player of all times. """
+
+para ="Who is Diego Maradona? Diego Maradona was the greatest soccer player of all times. How many goals did he score?"
 
 input_ids = tokenizer.encode(para, return_tensors="pt")
 with torch.no_grad():
@@ -28,6 +28,7 @@ with torch.no_grad():
         max_length=64,
         do_sample=True,
         top_p=0.95,
+        # num_beams=3,
         num_return_sequences=3,
     )
 

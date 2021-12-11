@@ -15,6 +15,15 @@ sentences_list = [
     "people who live Berlin are very unfriendly",
 ]
 
+query = "Who is Diego Maradona? Diego Maradona was the greatest soccer player of all times. How many goals did he score?"
+sentences_list = [
+    "Berlin has a population of 3,520,031 registered inhabitants in an area of 891.82 square kilometers.",
+    "New York City is famous for the Metropolitan Museum of Art.",
+    "How many goals did he score?",
+    "London has a population of around 8 million registered inhabitants",
+    "people who live Berlin are very unfriendly",
+]
+
 query_list = [query] * len(sentences_list)
 
 features = tokenizer(

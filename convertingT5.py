@@ -59,59 +59,81 @@ def onnx_model_init(qg_model):
     return model, tokenizer
     
     
-
-
 ##########################################################################
 
-# print()
-# device = "cuda" if torch.cuda.is_available() else "cpu"
-# print(f"AI model running on: {device}")
-# print()
+def benchmark(model, tokenizer):
+    
+    text_to_benchmark = "Python is an interpreted, high-level and general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects."
+    
+    input_ids = tokenizer.encode(text_to_benchmark, return_tensors="pt")
+    
+    outputs = model.generate(
+        input_ids=input_ids,
+        max_length=64,
+        do_sample=True,
+        top_p=0.95,
+        num_return_sequences=3,
+    )
+    
+    print(output.shape)
+    
+    print("\nGenerated Queries:")
+    for i in range(len(outputs)):
+        query = tokenizer.decode(outputs[i], skip_special_tokens=True)
+        print(f"{i + 1}: {query}")
 
 
-# # qg_model = "BeIR/query-gen-msmarco-t5-large-v1"
-
-# tokenizer = T5Tokenizer.from_pretrained(qg_model)
-# model = T5ForConditionalGeneration.from_pretrained(
-#     qg_model,
-# )
-# model.eval().to(device)
-
-# para = "Python is an interpreted, high-level and general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects."
-
-# start = time.time()
-# input_ids = tokenizer.encode(para, return_tensors="pt").to(device)
-# # print()
-# # print(input_ids.shape)
-# # print(input_ids)
-
-# average_inf = []
-# for _ in range(30):
-#     start = time.time()
-#     with torch.no_grad():
-#         outputs = model.generate(
-#             input_ids=input_ids,
-#             max_length=64,
-#             do_sample=True,
-#             top_p=0.95,
-#             num_return_sequences=3,
-#         )
-#     end = time.time()
-#     average_inf.append(end - start)
+    
+    ##################   Pytorch Inference on GPU   #########################
+    # print()
+    # device = "cuda" if torch.cuda.is_available() else "cpu"
+    # print(f"AI model running on: {device}")
+    # print()
 
 
-# print("Paragraph:")
-# print(para)
+    # qg_model = "BeIR/query-gen-msmarco-t5-large-v1"
 
-# print("\nGenerated Queries:")
-# for i in range(len(outputs)):
-#     query = tokenizer.decode(outputs[i], skip_special_tokens=True)
-#     print(f"{i + 1}: {query}")
+    # tokenizer = T5Tokenizer.from_pretrained(qg_model)
+    # model = T5ForConditionalGeneration.from_pretrained(
+    #     qg_model,
+    # )
+    # model.eval().to(device)
 
-# print()
-# print("Plain GPU Inference:")
-# print(f"Mean inference on GPU: {sum(average_inf)/len(average_inf):.3f} sec.")
-# print(f"Standard Deviation inference on GPU: {stdev(average_inf):.3f} sec.")
+    # start = time.time()
+    # input_ids = tokenizer.encode(text_to_benchmark, return_tensors="pt").to(device)
+    # # print()
+    # print(input_ids.shape)
+    # # print(input_ids)
+
+    # average_inf = []
+    # for _ in range(10):
+    #     start = time.time()
+    #     with torch.no_grad():
+    #         outputs = model.generate(
+    #             input_ids=input_ids,
+    #             max_length=64,
+    #             do_sample=True,
+    #             top_p=0.95,
+    #             num_return_sequences=3,
+    #         )
+    #     end = time.time()
+    #     average_inf.append(end - start)
+
+    
+    # print(outputs.shape)
+    # print(outputs)
+    # print("Text to Benchmark:")
+    # print(text_to_benchmark)
+
+    # print("\nGenerated Queries:")
+    # for i in range(len(outputs)):
+    #     query = tokenizer.decode(outputs[i], skip_special_tokens=True)
+    #     print(f"{i + 1}: {query}")
+
+    # print()
+    # print("Plain GPU Inference:")
+    # print(f"Mean inference on GPU: {sum(average_inf)/len(average_inf):.3f} sec.")
+    # print(f"Standard Deviation inference on GPU: {stdev(average_inf):.3f} sec.")
 
 
 if __name__ == "__main__":
@@ -126,6 +148,7 @@ if __name__ == "__main__":
     
     if onnx_inference:
         qg_model, qg_tokenizer = onnx_model_init(qg_model)
+        benchmark(qg_model, qg_tokenizer)
         
 
 
